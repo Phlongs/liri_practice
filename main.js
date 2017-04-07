@@ -2,14 +2,9 @@ var Twitter = require('twitter');
 var spotify = require('spotify');
 var request = require("request");
 var fs = require("fs");
-// var config = require('./config');
+var keys = require('./keys.js');
 
-var client = new Twitter({
-  consumer_key: 'ybx4bVAfZQOaQ6WIlK7BulQqV',
-  consumer_secret: 'RpAE1ViarxmgYkLKDhuemLlhgp9xxWjMGqrayiuKf6j81DZjSh',
-  access_token_key: '798639491930030080-S1GsesniwXPnLbuDLv0RpLyQ5xL9rz0',
-  access_token_secret: 'zLIZld77T9LkoaAertKqljLjcpWHvaWNv2DSpAODZawrP'
-});
+var client = new Twitter(keys);
 
 var command = process.argv[2];
 
